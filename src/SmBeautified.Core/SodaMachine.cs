@@ -25,6 +25,9 @@ namespace SmBeautified.Core
             Money += money;
         }
 
+        /// <summary>
+        /// Returns change
+        /// </summary>
         public Result<int> Order(string soda)
         {
             if (string.IsNullOrEmpty(soda)) throw new ArgumentException("Invalid soda");
@@ -42,6 +45,9 @@ namespace SmBeautified.Core
             return result;
         }
 
+        /// <summary>
+        /// Returns change
+        /// </summary>
         public Result<int> OrderBySms(string soda)
         {
             if (string.IsNullOrEmpty(soda)) throw new ArgumentException("Invalid soda");
@@ -59,6 +65,9 @@ namespace SmBeautified.Core
             return result;
         }
 
+        /// <summary>
+        /// Returns money to return
+        /// </summary>
         public Result<int> Recall()
         {
             if (Money == 0) return Result.Fail("Nothing to recall");
