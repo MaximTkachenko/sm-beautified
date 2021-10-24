@@ -16,6 +16,8 @@ namespace SmBeautified.Core
             _stock = stock.ToDictionary(x => x.Soda, x => x);
         }
 
+        public string Assortment => string.Join(',', _stock.Keys);
+
         public int Money { get; private set; }
 
         public void InsertMoney(int money)
